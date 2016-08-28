@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Gestión del Cambio y el Conocimiento</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Free Software Learning Object"/>
+    <meta content="ruby, oa, learning, object, free, software, linux" name="keywords"/>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css.map">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="/js/tether.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/eval.js"></script>
+  </head>
+  <body>
+    <div id="layout_cont" class="container">
+      <header>
+        <nav class="navbar navbar-light bg-faded custom-shadow mb20" style="background-color: #e3f2fd;">
+          <a class="navbar-brand" href="/">Gestión del Cambio y del Conocimiento</a>
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <div class="dropdown">
+                <a class="btn nav-link dropdown-toggle nav-link" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Contenido
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <h6 class="dropdown-header">Indice</h6>
+                    <a href="/ch_1" class="dropdown-item">Introducción</a>
+                    <a href="/ch_2" class="dropdown-item">Gestión del Cambio</a>
+                    <a href="/ch" class="dropdown-item">¿Cómo ejecutar la Gestión del Cambio?</a>
+                    <a href="/ch" class="dropdown-item">Las ventajas de implementar la Gestión del Cambio</a>
+                    <a href="/ch" class="dropdown-item">Gestión del Conocimiento</a>
+                    <a href="/ch" class="dropdown-item">Métodos de Gestión del Conocimiento</a>
+                    <a href="/ch" class="dropdown-item">Evaluación Final</a>
+                    <a href="/ch" class="dropdown-item">Gestión del Conocimiento</a>
+                    <a href="/ch" class="dropdown-item">Conclusión</a>
+                    <a href="/acerca_de" class="dropdown-item">Bibliografía</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/test">Ejercicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/acerca_de">Acerca de</a>
+            </li>
+          </ul>
+          <ul class="pull-xs-right nav navbar-nav">
+          </ul>
+        </nav>
+      </header>
+
+      <div class="card">
+        <div class="card-block pb0">
+          <%= yield_content :fixed_header %>
+        </div>
+        <div id="content-container" class="card-block">
+          <%= yield %>
+        </div>
+      </div>
+    
+      <footer class="bd-footer text-muted">
+        <nav class="navbar navbar-light bg-faded">
+          <ul id="navigation-options" class="nav navbar-nav">
+            <li class="nav-item"><<</li>
+            <li class="nav-item">Home</li>
+            <li class="nav-item">>></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+  </body> 
+</html>
