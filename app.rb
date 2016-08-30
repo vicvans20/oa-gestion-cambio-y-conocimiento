@@ -41,7 +41,7 @@ end
 get '/ch_6' do
     @next = "/ch_5"
     @prev = "/test"
-    erb :ch_5
+    erb :ch_6
 end
 
 get '/acerca_de' do
