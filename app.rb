@@ -39,8 +39,8 @@ get '/ch_5' do
 end
 
 get '/ch_6' do
-    @next = "/ch_5"
-    @prev = "/test"
+    @next = "/test"
+    @prev = "/ch_5"
     erb :ch_6
 end
 
