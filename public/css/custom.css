@@ -66,12 +66,16 @@ body{
 .index_list{
   font-size: 13px;
 }
+.index_list a:hover, .custom_list a:hover{
+  background-color: #70A7FF;
+}
+
 #content-container{
-  height: 420px;
+  height: 400px;
   overflow-y: auto;
 }
 #navigation-options{
   display: flex;
   justify-content: center;
-
+  font-size: 25px;
 }
