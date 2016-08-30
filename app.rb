@@ -38,6 +38,12 @@ get '/ch_5' do
     erb :ch_5
 end
 
+get '/ch_6' do
+    @next = "/ch_5"
+    @prev = "/test"
+    erb :ch_5
+end
+
 get '/acerca_de' do
   erb :about
 end
