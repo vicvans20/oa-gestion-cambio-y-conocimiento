@@ -50,6 +50,6 @@ get '/ch_7' do
  erb :ch_7
 end
 
-get '/acerca_de' do
+get '/about' do
   erb :about
 end
