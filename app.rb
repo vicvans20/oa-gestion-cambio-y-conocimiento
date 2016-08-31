@@ -45,11 +45,11 @@ get '/ch_6' do
 end
 
 get '/ch_7' do
-  @next = "/about"
+  @next = "/acerca_de"
     @prev = "/test"
  erb :ch_7
 end
 
-get '/about' do
-  erb :about
+get '/acerca_de' do
+  erb :acerca_de
 end
