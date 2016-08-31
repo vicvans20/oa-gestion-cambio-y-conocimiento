@@ -51,5 +51,5 @@ get '/ch_7' do
 end
 
 get '/acerca_de' do
-  erb :acerca_de
+  erb :about
 end
