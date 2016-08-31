@@ -44,6 +44,10 @@ get '/ch_6' do
     erb :ch_6
 end
 
+get '/end' do
+ erb :ch_7
+end
+
 get '/acerca_de' do
   erb :about
 end
