@@ -44,7 +44,7 @@ get '/ch_6' do
     erb :ch_6
 end
 
-get '/end' do
+get '/ch_7' do
  erb :ch_7
 end
 
