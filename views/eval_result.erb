@@ -1,0 +1,22 @@
+<h1 class="text-primary">Resultados</h1>
+<small class="text-muted">Resultados por cada test</small>
+<hr>
+<ul>
+  <li>Gestión del Cambio (Selección Multiple) - <%= cookies[:eval_1] %> correctas de 5.</li>
+  <li>Ejecución del cambio (Emparejamiento) - <%= cookies[:eval_2] %> correctas de 5.</li>
+  <li>Gestión del Conocimiento (Selección Multiple) - <%= cookies[:eval_3] %> correctas de 4.</li>
+  <li>Modelos de Gestión del Conocimiento (Sopa de Letras) - <%= cookies[:eval_4_time] %> segundos.</li>
+</ul>
+<div class="align-center">
+  <button id="show_results" class="btn btn-primary">Mostrar Resultado Final</button>
+  <h3 id="eval_results" class="hidden text-info"><%= @results %></h3>
+  <a href="/end"> <button type="submit" class="btn btn-primary">Siguiente</button>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#show_results").on("click",function(){
+      $("#eval_results").removeClass("hidden");
+      $("#to_final").removeClass("hidden");
+    })
+  })
+</script>

@@ -1,0 +1,44 @@
+<link rel="stylesheet" type="text/css" href="/css/word_find.css">
+<script type="text/javascript" src="/js/wordfind.js"></script> 
+<script type="text/javascript" src="/js/wordfindgame.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  // Timer
+  send_eval_conf("#form_eval_4", "/eval_final");
+  var timerInterval = null;
+
+  var starTimer = function(){
+    var start = new Date;
+
+    timerInterval = setInterval(function() {
+    $('#timer_word_finder').text(Math.round((new Date - start) / 1000, 0));
+    }, 1000);
+  }
+
+  var stopTimer = function() {
+    $("#word_next_btn").removeClass("hidden");
+    $("#tinput_word").val($("#timer_word_finder").text());
+    $("#timer_word_finder").addClass("text-success");
+    clearInterval(timerInterval);
+  }
+  var words = ['Nokata'];
+  var games = wordfindgame.create(words, '#juego', '#Palabras', {}, stopTimer); 
+   
+  var puz = wordfind.newPuzzle(words,{height: 18, width:18, fillBlanks: false});
+  wordfind.print(puz);   
+  starTimer();
+});
+</script>
+
+<h2 class="text-primary">Sección IV - Modelos de gestión del conocimiento</h2>
+<small class="text-muted">Encuentra los 5 nombres de programas ocultos en la sopa de letras.</small>
+<hr>
+<h5>Tiempo: <span id="timer_word_finder">0</span> Segundos</h5>
+<div id='juego'></div>
+<div id='Palabras'></div>
+    
+<form id="form_eval_4">
+  <button id="word_next_btn" type="submit" class="hidden btn btn-primary">Siguiente</button>
+  <input id="tinput_word" name="tinput" type="hidden">
+</form>
+

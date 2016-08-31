@@ -1,0 +1,69 @@
+<h2 class="text-primary">Sección II - Proceso de ejecución del cambio</h2>
+<small class="text-muted">Arrastra las etapas y construye el proceso del cambio. De izquierda a derecha.</small>
+<hr>
+<img class="mb20" style="display: block; margin: auto;" height="90px" src="img/right_arrow.png" alt="Proceso de cambio">
+
+<form id="form_eval_2">
+  <div id="drag-drop-cont" class="row">
+    
+    <div id="drop1" class="col-sm-2 dropable_content align-center" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <input name="drop_1" type="hidden" class="term_input">
+    </div>
+
+    <div id="drop2" class="col-sm-2 dropable_content align-center" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <input name="drop_2" type="hidden" class="term_input">
+    </div>
+
+    <div id="drop3" class="col-sm-2 dropable_content align-center" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <input name="drop_3" type="hidden" class="term_input">
+    </div>
+
+    <div id="drop4" class="col-sm-2 dropable_content align-center" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <input name="drop_4" type="hidden" class="term_input">
+    </div>
+
+    <div id="drop5" class="col-sm-2 dropable_content align-center" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <input name="drop_5" type="hidden" class="term_input">
+    </div>
+    
+  </div>
+  
+  <hr class="mb20">
+
+  <ul id="draggable-list" class="list-inline">
+      <li id="drag1" data-option="1" class="list-inline-item draggable_text text-info" draggable="true" ondragstart="drag(event)">Planificación</li>
+      <li id="drag2" data-option="2" class="list-inline-item draggable_text text-info" draggable="true" ondragstart="drag(event)">Diagnóstico inicial</li>
+      <li id="drag3" data-option="3" class="list-inline-item draggable_text text-info" draggable="true" ondragstart="drag(event)">Evaluación Final</li>
+      <li id="drag4" data-option="4" class="list-inline-item draggable_text text-info" draggable="true" ondragstart="drag(event)">Diseño del proceso</li>
+      <li id="drag5" data-option="5" class="list-inline-item draggable_text text-info" draggable="true" ondragstart="drag(event)">Implantación de cambios</li>
+  </ul>
+
+  <button type="submit" class="btn btn-primary">Siguiente</button>
+</form>
+
+<script>
+send_eval_conf("#form_eval_2", "/eval_3");
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    // element_id is id of dragged element
+    // text element is dragged element
+    var element_id = ev.dataTransfer.getData("text");
+    // Dropable element is appended with dragged element
+    debugger;
+    ev.target.appendChild(document.getElementById(element_id));
+    $textElem = $("#"+element_id);
+    // target id is dropable element id
+    var targetId = ev.target.id;
+    $termInput = $("#"+targetId).find(".term_input");
+    // insert value to hidden input
+    $termInput.val($textElem.data("option"));
+}
+</script>
