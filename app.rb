@@ -57,6 +57,7 @@ get '/acerca_de' do
 end
 
 get '/test' do
+  @prev = "/ch_6"
   @hide_next = true
   erb :test_intro
 end
