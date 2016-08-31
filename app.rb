@@ -45,6 +45,8 @@ get '/ch_6' do
 end
 
 get '/ch_7' do
+  @next = "/about"
+    @prev = "/test"
  erb :ch_7
 end
 
