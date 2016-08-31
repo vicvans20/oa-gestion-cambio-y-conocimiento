@@ -51,5 +51,7 @@ get '/ch_7' do
 end
 
 get '/acerca_de' do
+  @next = "/"
+  @prev = "/ch_7"
   erb :about
 end
