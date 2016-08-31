@@ -46,7 +46,7 @@ end
 
 get '/closure' do
   @next = "/acerca_de"
-  @prev = "/test"
+  @prev = "/eval_1"
   erb :ch_7
 end
 
@@ -110,8 +110,8 @@ def eval_2(data)
   points +=1 if data[:drop_1] == "4"
   points +=1 if data[:drop_2] == "2"
   points +=1 if data[:drop_3] == "1"
-  points +=1 if data[:drop_3] == "5"
-  points +=1 if data[:drop_3] == "3"
+  points +=1 if data[:drop_4] == "5"
+  points +=1 if data[:drop_5] == "3"
   return points
 end
 

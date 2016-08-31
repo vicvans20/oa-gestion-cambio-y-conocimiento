@@ -21,7 +21,7 @@ $(document).ready(function(){
     $("#timer_word_finder").addClass("text-success");
     clearInterval(timerInterval);
   }
-  var words = ['Nokata'];
+  var words = ['Nokata', 'KPMG', 'Takeuchi', 'Andersen'];
   var games = wordfindgame.create(words, '#juego', '#Palabras', {}, stopTimer); 
    
   var puz = wordfind.newPuzzle(words,{height: 18, width:18, fillBlanks: false});
@@ -31,7 +31,7 @@ $(document).ready(function(){
 </script>
 
 <h2 class="text-primary">Sección IV - Modelos de gestión del conocimiento</h2>
-<small class="text-muted">Encuentra los 5 nombres de programas ocultos en la sopa de letras.</small>
+<small class="text-muted">Encuentra en la sopa de letras los terminos relacionados a los modelos de gestión del conocimiento.</small>
 <hr>
 <h5>Tiempo: <span id="timer_word_finder">0</span> Segundos</h5>
 <div id='juego'></div>
